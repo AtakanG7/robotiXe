@@ -141,7 +141,37 @@ def extractMyEmbeddings():
     chat_history = response["chat_history"]
     displayMessages(chat_history)
 ```
+* displayMessages() is a work flow function which means has no good to the topic.
 ---
-* displayMessages() is a work flow function which means it makes sense only to me.
+### How To Run On Local Systems
+---
+* I'm assuming you are using windows os.
+* First of all clone my work.
+```
+    git clone https://github.com/AtakanG7/langchain-qa.git
+```
+* Make sure you're cloning it to a proper place you can find. You can make sure
+* this by writing ***"pwd"*** to command line it will give you the exact path to your location
+* After you make sure you're okay we need to download the dependencies. But I encourage you to
+* create a virtual envirement to avoid any package conflicts. Here is how : 
+```
+    python -m venv your_env_name
+```
+" Now, the envirement is supposed to be added to your directory. You need to activate it. 
+```
+    .your_env_name\Scripts\activate
+```
+* Congratulations, you are half way there. Now install dependencies.
+```
+    pip install -r requirements.txt
+```
+* This will take some time.
+* After all things set up, you need run the project
+```
+    streamlit run qa.pdf.py
+```
+---
+
 * All in all, I tried my best to explain. Thanks for visiting.
-* You can check my website from here (not yet) 😊👋
+* If you have any questions you can e-mail me pwxcv7352@gmail.com 😊👋
+* Good Luck!
