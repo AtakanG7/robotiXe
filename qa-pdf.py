@@ -30,6 +30,9 @@ if not "chain" in st.session_state:
 if not "chain1" in st.session_state:
     st.session_state.chain1 = None
 
+if not "key" in st.session_state:
+    st.session_state.key = None
+
 key = os.getenv("OPENAI_API_KEY")
 
 
@@ -134,6 +137,8 @@ def main():
         pdf = st.file_uploader(
             label="Upload your pdf file below ", accept_multiple_files=False)
 
+        
+        
         temperature = st.slider(
             "Select:",
             0, 10, 1)
