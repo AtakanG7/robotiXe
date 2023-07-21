@@ -1,24 +1,12 @@
 # PDF Question-Answer & Question Generating (Langchain)
 - Chat with your documents 📃
 ---
-## Commitment To The Document
----
-- **I gave this text which was in the document.**
- ![d](https://github.com/AtakanG7/langchain-qa/assets/115896304/e28b83e2-977d-4dda-a381-aa3ad67ac72f)
- ![c](https://github.com/AtakanG7/langchain-qa/assets/115896304/ac0214bd-ca98-40c6-bb75-e452fe140bff)
-- **it gave me this! This doesnt entirely proves that only answers from the document so I had to be sure and I asked one more question.**
-![b](https://github.com/AtakanG7/langchain-qa/assets/115896304/d4a0148a-579a-4f96-9617-309c4d653d31)
-![a](https://github.com/AtakanG7/langchain-qa/assets/115896304/cae436b9-babe-46a5-9e96-5c92ea9f1399)
-- **Overall, I'm convinced that this set-up only answers from the document.**
-- **Whenever I ask non-sense question. It says ***"I don't know"*** which is what we expect.**
-![Screenshot 2023-07-21 064108](https://github.com/AtakanG7/langchain-qa/assets/115896304/cff8353f-254f-4f97-bfdf-e02755b9bfc4)
-![Screenshot 2023-07-21 064125](https://github.com/AtakanG7/langchain-qa/assets/115896304/8cdbe5b2-f4e2-4949-a0b0-da4d8a2480ed)
----
+
 ---
 ## Question Generation
 ---
-* In this section we'll start to talk more about code. Since generating questions extremly easy one, I wil discuss How we chat later on. To generate
-* question you only need to know how to write some **prompts** and have an **api key**.
+* In this section we'll start to talk more about code. Since generating questions extremly easy one, I wil discuss How we chat later on. 
+* To generate question you only need to know how to write some **prompts** and have an **api key**.
 ```
 PROMPT = PromptTemplate.from_template(template=""" 
     given context generate 5 questions out of given context never give your opinion. If the information is not enough to generate 5 questions,
@@ -91,7 +79,21 @@ end of the ***generating questions section***
 * sentence_transformers 
 * faiss-cpu
 --- 
-* Let's start talking about what we expect from these conversation bots. We don't want them to give non-sense, unrelated answers. To avoid that we can either use prompts or conversation chains. In this case, we will be using chains.
+* Let's start talking about what we expect from these conversation bots. We don't want them to give non-sense, unrelated answers. To avoid that we can either use prompts or conversation chains. In this case, we will be using chains. 
+---
+## Commitment To The Document
+---
+- **I gave this text which was in the document.**
+ ![d](https://github.com/AtakanG7/langchain-qa/assets/115896304/e28b83e2-977d-4dda-a381-aa3ad67ac72f)
+ ![c](https://github.com/AtakanG7/langchain-qa/assets/115896304/ac0214bd-ca98-40c6-bb75-e452fe140bff)
+- **it gave me this! This doesnt entirely proves that only answers from the document so I had to be sure and I asked one more question.**
+![b](https://github.com/AtakanG7/langchain-qa/assets/115896304/d4a0148a-579a-4f96-9617-309c4d653d31)
+![a](https://github.com/AtakanG7/langchain-qa/assets/115896304/cae436b9-babe-46a5-9e96-5c92ea9f1399)
+- **Overall, I'm convinced that this set-up only answers from the document.**
+- **Whenever I ask non-sense question. It says ***"I don't know"*** which is what we expect.**
+![Screenshot 2023-07-21 064108](https://github.com/AtakanG7/langchain-qa/assets/115896304/cff8353f-254f-4f97-bfdf-e02755b9bfc4)
+![Screenshot 2023-07-21 064125](https://github.com/AtakanG7/langchain-qa/assets/115896304/8cdbe5b2-f4e2-4949-a0b0-da4d8a2480ed)
+---
 * I'll be explaining things by showing the code.
 ```
 def setConversation(temperature):
@@ -109,7 +111,7 @@ def setConversation(temperature):
 #### Differently There is Memory 
 * Memory is a must, if you want to build a chat bot.
 * There are a lot of memory out there. And each memory has its own feature.
-* Check out more information from here ![link](https://python.langchain.com/docs/modules/memory/how_to/buffer_window)
+* Check out more information https://python.langchain.com/docs/modules/memory/how_to/buffer_window
 #### ***Embeddings***
 * The most known embeddings today are HuggingFaceInstructEmbeddings and OpenAIEmbeddings
 * There are pros and cons for each of these.
