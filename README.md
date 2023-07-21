@@ -163,12 +163,12 @@ def extractMyEmbeddings():
 ```
     .your_env_name\Scripts\activate
 ```
-* Congratulations, you are half way there. Now install dependencies.
+* Congratulations, you are half way there. Now install the dependencies.
 ```
     pip install -r requirements.txt
 ```
 * This will take some time.
-* After all things set up, you need run the project
+* After all things set up, you need to run the project
 ```
     streamlit run qa.pdf.py
 ```
