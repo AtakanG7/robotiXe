@@ -27,7 +27,7 @@ def setConversation_1(temperature):
     st.session_state.chain1 = LLMChain(llm=llm, prompt=PROMPT)
 ```
 * First, we need to understand some words here,
-* ***temperature:*** means how deterministic the model should be. (1 to 10)
+* ***temperature:*** means how deterministic the model should be. (0 to 1)
 * ***model_name:*** in this case "gpt-3.5-turbo" which is the model used.
 * After, knowing a little more, we can pass to helper functions.
 * ***Reads uploaded documents***
