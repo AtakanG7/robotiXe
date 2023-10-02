@@ -1,7 +1,8 @@
-langchain
-openai
-PyPDF2
-streamlit 
-InstructorEmbedding
-sentence_transformers
-faiss-cpu
+langchain==0.0.247
+openai==0.27.8
+PyPDF2==3.0.1
+streamlit==1.24.1
+InstructorEmbedding==1.0.1
+sentence_transformers==2.2.2
+faiss-cpu==1.7.4
+torch==2.0.1

@@ -3,7 +3,7 @@ import streamlit as st
 from PyPDF2 import PdfReader
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.vectorstores import FAISS
-from langchain.llms import OpenAI
+from langchain.chat_models.openai import ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain, LLMChain
 from langchain.memory import ConversationBufferMemory
 from langchain import PromptTemplate
@@ -11,9 +11,6 @@ import os
 import pickle
 from streamlit import chat_message
 import random
-from dotenv import load_dotenv
-
-load_dotenv()
 
 if not "pdfname" in st.session_state:
     st.session_state.pdfname = None
@@ -41,6 +38,7 @@ PROMPT = PromptTemplate.from_template(template="""
                         
 - Generate these questions in Turkish:
 """)
+
 
 def displayMessages(chat_history):
     count = 1
@@ -71,14 +69,14 @@ def extractMyEmbeddings():
     chunks = text_splitter.split_text(text=st.session_state.text)
 
     embeddings = HuggingFaceInstructEmbeddings(
-        model_name="hkunlp/instructor-xl")
+        model_name="sentence-transformers/distiluse-base-multilingual-cased-v2")
     
     return FAISS.from_texts(embedding=embeddings, texts=chunks)
 
 
 def setConversation(temperature):
 
-    llm = OpenAI(temperature=temperature/10,
+    llm = ChatOpenAI(temperature=temperature/10,
                  model_name="gpt-3.5-turbo", openai_api_key=st.session_state.key)
     
     memory = ConversationBufferMemory(
@@ -89,7 +87,7 @@ def setConversation(temperature):
 
 def setConversation_1(temperature):
 
-    llm = OpenAI(temperature=temperature/10,
+    llm = ChatOpenAI(temperature=temperature/10,
                  model_name="gpt-3.5-turbo", openai_api_key=st.session_state.key)
     st.session_state.chain1 = LLMChain(llm=llm, prompt=PROMPT)
 
