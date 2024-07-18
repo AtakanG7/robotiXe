@@ -22,10 +22,8 @@ class QuestionGenerator:
         sampled_chunks = self._sample_chunks(chunks)
         chain = self._create_question_generation_chain()
         
-        # Join the sampled chunks into a single string
         context = "\n\n".join(sampled_chunks)
         
-        # Pass the context as a dictionary to the chain
         return chain({"context": context})
 
     def _create_text_chunks(self, chunk_size=2000, chunk_overlap=300):
