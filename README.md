@@ -1,7 +1,34 @@
-# PDF Question-Answer & Question Generating (Langchain)
-- A chatbot enables you to ask questions to your documents 📃 Easy to integrate into the existing python based framworks like flask.
----
-https://smartpdf.onrender.com/
+# PDF Question-Answer & Question Generation with Langchain
+This project provides a powerful chatbot that allows users to interact with their PDF documents by asking questions and receiving accurate answers. Additionally, it can generate relevant questions from the content of the PDFs. This chatbot can be easily integrated into Python-based frameworks like Flask.
+
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://smartpdf.onrender.com/)
+
+## 🌟 Key Features
+
+- **Interactive Q&A**: Chat with your documents as if they were a knowledgeable expert
+- **Automatic Question Generation**: Create quizzes and test your understanding
+- **Multi-lingual Support**: Generate questions in various languages, including Turkish
+- **Smart Context Retrieval**: Get accurate answers even from large documents
+- **Easy Integration**: Seamlessly incorporate into existing Python frameworks like Flask
+
+## 🛠️ Under the Hood
+
+### Question Generation
+
+Harness the power of language models to create engaging questions from your documents:
+
+1. **Prompt Engineering**: Craft the perfect prompt to guide the AI
+2. **LLM Integration**: Leverage OpenAI's GPT models for intelligent question creation
+3. **Context Chunking**: Efficiently process large documents for comprehensive coverage
+
+### Document Chat
+
+Engage in meaningful conversations with your PDFs:
+
+1. **Embeddings**: Transform text into rich vector representations
+2. **Semantic Search**: Find the most relevant context for each query
+3. **Conversational Memory**: Maintain context throughout the chat session
+4. **Focused Responses**: Get answers strictly based on document content
 ---
 ## Question Generation
 ---
@@ -65,8 +92,8 @@ def retrieve5Chunks():
     response = st.session_state.chain1(docs)
     st.write(response)
 ```
-end of the ***generating questions section***
----
+
+
 ## Chatting With Documents
 ---
 * Since we need embeddings. Things will somehow mix up. Therefore, we better talk about ***dependencies**
