@@ -1,0 +1,47 @@
+/* style.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f6;
+    color: #1e1e1e;
+}
+
+.main-header {
+    color: #1e1e1e;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.chat-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.generated-questions {
+    background-color: #e6f3ff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.stButton>button {
+    width: 100%;
+    border-radius: 5px;
+    height: 3em;
+    font-weight: 500;
+}
+
+.stTextInput>div>div>input {
+    border-radius: 5px;
+}
+
+hr {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
