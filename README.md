@@ -1,5 +1,5 @@
 # PDF Question-Answer & Question Generating (Langchain)
-- Chat with your documents 📃
+- A chatbot enables you to ask questions to your documents 📃 Easy to integrate into the existing python based framworks like flask.
 ---
 https://smartpdf.onrender.com/
 ---
