@@ -1,6 +1,6 @@
 # PDF Question-Answer & Question Generation with Langchain
 This project provides a powerful chatbot that allows users to interact with their PDF documents by asking questions and receiving accurate answers. Additionally, it can generate relevant questions from the content of the PDFs. This chatbot can be easily integrated into Python-based frameworks like Flask.
----
+
 [![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://smartpdf.onrender.com/)
 
 https://github.com/user-attachments/assets/5f4c47cd-9ee3-4670-8b47-dc46607524c3
