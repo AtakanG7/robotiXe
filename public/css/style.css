@@ -1,47 +1,159 @@
-/* style.css */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f0f2f6;
-    color: #1e1e1e;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
-.main-header {
-    color: #1e1e1e;
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
-.chat-container {
-    background-color: white;
-    border-radius: 10px;
+header {
     padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    background: #007bff;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.generated-questions {
-    background-color: #e6f3ff;
-    border-radius: 10px;
+header h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+header .user-info {
+    display: flex;
+    gap: 10px;
+}
+
+header .user-info a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
     padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
 }
 
-.stButton>button {
-    width: 100%;
-    border-radius: 5px;
-    height: 3em;
-    font-weight: 500;
+.chat-window {
+    height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: #fefefe;
 }
 
-.stTextInput>div>div>input {
-    border-radius: 5px;
+.chat-message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    max-width: 80%;
 }
 
-hr {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    border: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+.chat-message.user {
+    background: #007bff;
+    color: white;
+    margin-left: auto;
+    text-align: right;
 }
+
+.chat-message.assistant {
+    background: #e9ecef;
+    color: #333;
+}
+
+.chat-input, .upload-form {
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input input, .upload-form input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.chat-input button, .upload-form button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.chat-input button:disabled, .upload-form button:disabled {
+    background: #ddd;
+    cursor: not-allowed;
+}
+
+.warning {
+    color: red;
+    margin-bottom: 10px;
+}
+
+/* Remove Streamlit header and footer */
+.stDecoration, .stFooter {
+    display: none;
+  }
+  
+  /* Remove Streamlit sidebar */
+  .stSidebar {
+    display: none;
+  }
+  
+.css-18ni7ap{
+    display: none !important;
+}
+
+.css-h5rgaw{
+    display: none !important;
+}
+
+header footer .css-h5rgaw .e1g8pov61{
+    display: none !important;
+}
+
+  /* Keep Streamlit components */
+  button.stButton,
+  div.stCheckbox,
+  div.stRadio,
+  div.stSelectbox,
+  div.stMultiSelect,
+  div.stTextInput,
+  div.stNumberInput,
+  div.stDateInput,
+  div.stTimeInput,
+  div.stDatetimeInput,
+  div.stTextArea,
+  div.stCode,
+  div.stMarkdown,
+  div.stTable,
+  div.stChart,
+  div.stImage,
+  div.stVideo,
+  div.stAudio,
+  div.stMap,
+  div.stFileDownloader,
+  div.stSlider,
+  div.stColorPicker,
+  div.stProgressIndicator,
+  div.stExpander,
+  div.stTabs,
+  div.stContainer,
+  div.stColumns,
+  div.stLayout {
+    display: initial;
+  }
